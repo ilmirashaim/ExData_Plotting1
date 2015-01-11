@@ -1,9 +1,10 @@
 #set locale for correct weekdays names
 Sys.setlocale("LC_ALL", 'en_US.UTF-8')
 
+# Reading data from file if they haven't been already loaded to session
 if(!exists("dataFiltered")){
     source("readData.R")
-    dataFiltered <- readData()
+    dataFiltered <- readData() #loading and filtering data
 }
 
 #plot3
